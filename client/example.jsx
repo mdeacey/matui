@@ -45,7 +45,7 @@ var App = React.createClass({
   render: function() {
     return (
       <Card>
-        <CardTitle title="Welcome to Meteor!"/>
+        <CardTitle title="This is example page"/>
         <CardActions>
           <FlatButton label="Click Me" onClick={this.increaseCount}/>
         </CardActions>
@@ -57,9 +57,7 @@ var App = React.createClass({
   }
 });
 
-Meteor.startup(function () {
-  Session.setDefault('count', 0);
-
-  // Use Meteor.startup to render the component after the page is ready
-  ReactDOM.render(<App />, document.getElementById("render-target"));
-});
+//Meteor.startup(function () {
+//  Session.setDefault('count', 0);
+//  ReactDOM.render(<App />, document.getElementById("render-target"));
+//});
