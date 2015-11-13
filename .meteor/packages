@@ -36,3 +36,6 @@ email
 npm-bcrypt
 accounts-password
 endotakashi:material-ui-mixin
+aldeed:collection2
+coniel:react-form-handler
+coniel:react-form-handler-material-ui
