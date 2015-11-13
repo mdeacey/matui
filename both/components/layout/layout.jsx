@@ -3,7 +3,7 @@ MainLayout = React.createClass({
     return (
       <div>
         <Header />
-        <main>{this.props.content}</main>
+        <main className="main-area">{this.props.content}</main>
       </div>
     );
   }
