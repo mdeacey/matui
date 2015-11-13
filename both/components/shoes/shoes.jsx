@@ -8,17 +8,8 @@ var {
 var { ThemeManager, LightRawTheme } = MUI.Styles;
 
 Shoes = React.createClass({
-  childContextTypes: {
-        muiTheme: React.PropTypes.object
-    },
-
-  getChildContext() {
-      return {
-          muiTheme: ThemeManager.getMuiTheme(LightRawTheme)
-      };
-  },
-
-  render() {
+  mixin:[MaterialUIMixin],
+  render: function() {
     return (
       <div>
         <div className="container">

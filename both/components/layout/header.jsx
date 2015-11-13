@@ -17,7 +17,7 @@ Header = React.createClass({
                 <span className="icon-bar"></span>
               </button>
               <a className="navbar-brand" href={FlowRouter.path('home')}>
-                Top Shop
+                Protyp
               </a>
             </div>
 
