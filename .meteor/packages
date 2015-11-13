@@ -22,3 +22,17 @@ react
 twbs:bootstrap
 kadira:flow-router-ssr
 izzilab:material-ui
+autopublish
+check
+random
+ejson
+service-configuration
+underscore
+ddp
+oauth-encryption
+ddp-rate-limiter
+accounts-base
+email
+npm-bcrypt
+accounts-password
+endotakashi:material-ui-mixin

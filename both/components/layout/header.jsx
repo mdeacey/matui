@@ -24,7 +24,6 @@ Header = React.createClass({
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav">
                 <li><a href={FlowRouter.path('shoes')}>Shoes<span className="sr-only">(current)</span></a></li>
-                <li><a href={FlowRouter.path('clothes')}>Clothes</a></li>
               </ul>
             </div>
           </div>

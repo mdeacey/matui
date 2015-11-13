@@ -13,11 +13,3 @@ FlowRouter.route('/shoes', {
     ReactLayout.render(MainLayout, {content: <Shoes />});
   }
 });
-
-FlowRouter.route('/clothes', {
-  name: "clothes",
-  action: function() {
-    DocHead.setTitle("Clothes");
-    ReactLayout.render(MainLayout, {content: <Clothes />});
-  }
-});
