@@ -1,8 +1,5 @@
-FlowRouter.route("/home", {
-    name: 'homepage',
-    action: function() {
-        ReactLayout.render(Home, {
-            content: 'Homepage'
-        })
-    }
-});
+Reaktor.init(
+    <Router>
+        <Route path="/home" layout={Home} />
+    </Router>
+);
