@@ -1,6 +1,15 @@
 injectTapEventPlugin();
 
-let { FormsyCheckbox, FormsyDate, FormsyRadio, FormsyRadioGroup, FormsySelect, FormsyText, FormsyTime, FormsyToggle } = FMUI;
+let {
+  FormsyCheckbox,
+  FormsyDate,
+  FormsyRadio,
+  FormsyRadioGroup,
+  FormsySelect,
+  FormsyText,
+  FormsyTime,
+  FormsyToggle
+} = FMUI;
 
 Home = React.createClass({
   childContextTypes: {
