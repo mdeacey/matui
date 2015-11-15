@@ -31,3 +31,6 @@ meteorhacks:npm
 
 npm-container
 kadira:reaktor
+izzilab:material-ui
+kadira:dochead
+twbs:bootstrap
