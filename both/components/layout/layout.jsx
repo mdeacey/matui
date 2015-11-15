@@ -21,6 +21,7 @@ MainLayout = React.createClass({
   render() {
     return (
       <div>
+        <Header />
         <div className="container">
           <div className="well">
             <h1>This is the page for Shoes!</h1>
