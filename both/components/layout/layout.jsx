@@ -24,7 +24,7 @@ MainLayout = React.createClass({
     return (
       <div>
         <Header />
-            <h1>Protyp</h1>
+        {this.props.content}
       </div>
     );
   }

@@ -11,6 +11,10 @@ let {
   FormsyToggle
 } = FMUI;
 
+var {
+  LeftNav, MenuItem
+} = MUI;
+
 Home = React.createClass({
   childContextTypes: {
     muiTheme: React.PropTypes.object
@@ -81,90 +85,16 @@ Home = React.createClass({
     let { wordsError, numericError, urlError } = this.errorMessages;
 
     return (
-
-      <Paper style={paperStyle}>
-
-        <Formsy.Form
-          onValid={this.enableButton}
-          onInvalid={this.disableButton}
-          onValidSubmit={this.submitForm}
-          onInvalidSubmit={this.notifyFormError} >
-
-          <FormsyText
-            name='name'
-            validations='isWords'
-            validationError={wordsError}
-            required
-            hintText="What is your name?"
-            floatingLabelText="Name" />
-
-          <FormsyText
-            name='chuck'
-            validations='isNumeric'
-            validationError={numericError}
-            required
-            hintText="wood could a woodchuck chuck?"
-            floatingLabelText="How much" />
-
-          <FormsyText
-            name='url'
-            validations='isUrl'
-            validationError={urlError}
-            required
-            defaultValue="http://"
-            hintText="http://www.example.com"
-            floatingLabelText="URL" />
-
-          <FormsySelect
-            name='frequency'
-            required
-            floatingLabelText="How often do you?"
-            menuItems={this.selectFieldItems}/>
-
-          <FormsyDate
-            name='date'
-            required
-            floatingLabelText="Date" />
-
-          <FormsyTime
-            name='time'
-            required
-            floatingLabelText="Time" />
-
-          <FormsyCheckbox
-            name='agree'
-            label="Do you agree to disagree?"
-            defaultChecked={true}
-            style={switchStyle} />
-
-          <FormsyToggle
-            name='toggle'
-            label="Toggle"
-            style={switchStyle} />
-
-          <FormsyRadioGroup name="shipSpeed" defaultSelected="not_light">
-            <FormsyRadio
-              value="light"
-              label="prepare for light speed"
-              style={switchStyle} />
-            <FormsyRadio
-              value="not_light"
-              label="light speed too slow"
-              style={switchStyle}/>
-            <FormsyRadio
-              value="ludicrous"
-              label="go to ludicrous speed"
-              style={switchStyle}
-              disabled={true}/>
-          </FormsyRadioGroup>
-
-          <RaisedButton
-            style={submitStyle}
-            type="submit"
-            label="Submit"
-            disabled={!this.state.canSubmit} />
-        </Formsy.Form>
-      </Paper>
+      <div>
+        <LeftNav ref="leftNav" docked={false} >
+          <MenuItem index={0}>Menu Item 1</MenuItem>
+          <MenuItem index={1}>Menu Item 2</MenuItem>
+          <MenuItem index={2}>Menu Item 3</MenuItem>
+          <MenuItem index={3}>Menu Item 4</MenuItem>
+          <MenuItem index={4}>Menu Item 5</MenuItem>
+        </LeftNav>
+        here is grid 
+      </div>
     );
   }
 });

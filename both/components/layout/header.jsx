@@ -1,22 +1,13 @@
 injectTapEventPlugin();
 
-let {
-  FormsyText
-} = FMUI;
-
-var {
-  AppBar,
-  RaisedButton
-} = MUI;
-
-var {
-  ThemeManager,
-  LightRawTheme
-} = MUI.Styles;
+let { FormsyText } = FMUI;
+var { AppBar, FlatButton, FloatingActionButton } = MUI;
+var { ThemeManager, LightRawTheme } = MUI.Styles;
 
 
 Header = React.createClass({
-  childContextTypes: {
+
+childContextTypes: {
     muiTheme: React.PropTypes.object
   },
 
@@ -40,11 +31,6 @@ Header = React.createClass({
   styles: {
     paperStyle: {
       width: 300,
-      margin: 20,
-      padding: 20
-    },
-    switchStyle: {
-      marginBottom:16
     }
   },
 
@@ -62,22 +48,39 @@ Header = React.createClass({
   },
 
   submitForm: function (data) {
-    alert(JSON.stringify(data, null, 4));
+    // items = Items.find({userId: Meteor.userId()}).fetch();
+    result = Meteor.protyp_users.find({email:data.email}).fetch();
+
+    console.log(result);
+    open("/home", "_self");
   },
 
   notifyFormError: function (data) {
     console.error('Form error:', data);
   },
 
+  login: function () {
+
+  },
+
+
+
+
+
+
+
+
   render: function () {
     let {paperStyle, switchStyle, submitStyle } = this.styles;
     let { wordsError, urlError } = this.errorMessages;
 
-
     return (
-      <div>
-        <AppBar title="Protyp"
+      <div className="top-appbar">
+        <AppBar
+          title="Protyp"
+
           iconElementRight={
+
             <div>
 
               <Formsy.Form
@@ -87,31 +90,26 @@ Header = React.createClass({
                 onInvalidSubmit={this.notifyFormError} >
 
                 <FormsyText
-                  name='url'
-                  validations='isUrl'
-                  validationError={urlError}
+                  name='email'
                   required
-                  defaultValue="http://"
-                  hintText="user@email.com"
-                  floatingLabelText="Email" />
+                  className="header-inputbox"
+                  hintText="What is your email?"
+                  floatingLabelText="Email Address" />&nbsp;
 
                 <FormsyText
-                    name='name'
-                    validations='isWords'
-                    validationError={wordsError}
-                    required
-                    hintText="What is your password?"
-                    floatingLabelText="Password" />
+                  name='password'
+                  type='password'
+                  required
+                  className="header-inputbox"
+                  primary={true}
+                  hintText="What is your password?"
+                  floatingLabelText="Password" />
 
-                    <RaisedButton
-                        linkButton={true}
-                        primary={true}
-                        href="/login"
-                        label="Login" />
+                <FlatButton label="Login"/>
 
-                    </Formsy.Form>
+              </Formsy.Form>
 
-                    </div>
+            </div>
           } />
       </div>
     );
